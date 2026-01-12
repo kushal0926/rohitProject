@@ -5,6 +5,10 @@
     font-family: monospace;
 }
 
+span {
+    color: #72fa77;
+}
+
 /* selection the nav tags through the class name that i setup in the html  */
 .navbar {
     display: flex;
