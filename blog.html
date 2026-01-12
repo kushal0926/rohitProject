@@ -1,54 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-<link>
-    <!-- here i am adding the meta tags for the better SEO -->
-     <!-- meta tags are used to describe the content of the page -->
-     <!-- charset is used to describe the character set of the page -->
+<head>
     <meta charset="UTF-8">
-    <!-- viewport is used to describe the view of the page on the screen -->
-    <!-- width=device-width is used to make the page responsive -->
-    <!-- initial-scale=1.0 is used to make the page scalable -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- title of the project using the title tag -->
-    <!-- title tag is used to describe the title of the page -->
     <title>rohitProject</title>
-    <!-- linking the style sheet in the external stylesheet for better code. -->
-    <!-- link tag is used to link the style sheet to the page -->
-    <!-- rel="stylesheet" is used to link the style sheet to the page -->
-    <!-- href="styles.css" is used to link the style sheet to the page -->
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/styles.css" />
+
 </head>
 <body>
-    <!-- content pages  -->
-     <!-- using the navigation link for the top nav -->
-        <nav class="navbar">
-            <!-- heading of the project using the h1 tag -->
-            <!-- h1 tag is used to describe the heading of the page -->
-            <h1 class="navbar_heading">EcoMart</h1>
-            <!-- unordered list of the project using the ul tag -->
-            <!-- ul tag is used to describe the unordered list of the page -->
-            <ul>
-                <!-- list item of the project using the li tag -->
-                <!-- li tag is used to describe the list item of the page -->
-                 <!-- a tag is used to describe the link of the page -->
-                <li><a href="home.html">Home</a></li>
-                <li><a href="products.html">Products</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="aboutus.html">About Us</a></li>
-                <li><a href="research.html">Research</a></li>
-            </ul>
+        <header>
+            <nav class="navbar">
+                <h1 class="navbar_heading">EcoMart</h1>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="aboutus.html">About Us</a></li>
+                    <li><a href="research.html">Research</a></li>
+                </ul>
+    
+                <div class="icons">
+                    <div id="search-btn">
+                        <img style="height: 30px; width: 30px; margin-right: 2rem;" src="./images/icons/search.png" alt="search_icon">
+                    </div>
+                    <div id="cart-btn">
+                        <img style="height: 30px; width: 30px; margin-right: 2rem;"  src="./images/icons/cart.png" alt="cart icon">
+                    </div>
+                    <div id="user-btn">
+                        <img style="height: 30px; width: 30px; margin-right: 5rem;" src="./images/icons/user.png" alt="user icon">
+                    </div>
+                </div>
+            </nav>
+        </header>
 
-            <!-- adding the search bar using the input field -->
-            <!-- input tag is used to describe the input field of the page -->
-            <!-- type="text" is used to describe the type of the input field -->
-            <!-- placeholder="Search for products" is used to describe the placeholder of the input field -->
-            <!-- class="search_bar" is used to describe the class of the input field -->
-            <input
-            type="text"
-            placeholder="Search for products"
-            class="search_bar"
-            />
-        </nav>
+        <main>
+          <div style="display: flex; flex-direction: column; align-items: center; padding: 4rem;">
+            <h1 style="font-size: 5rem; ">Organic Products For You</h1>
+            <p style="font-size: 3rem;">This Website is designed by Rohit Gurung</p>
+            <button class="shop-btn">Shop now</button>
+          </div>
+          
+        </main>
+
+
+        <footer class="footer">
+            <div class="footer-container">
+                <div class="footer-section">
+                    <h3 class="footer-heading">ECOMART</h3>
+                    <p class="footer-text">Your trusted source for organic and eco-friendly products. Quality you can trust, nature you can feel.</p>
+                </div>
+        
+                <div class="footer-section">
+                    <h4 class="footer-title">Contact Us</h4>
+                    <ul class="footer-contact">
+                        <li>Email: info@ecomart.com</li>
+                        <li>Phone: +977 1234567890</li>
+                    </ul>
+                </div>
+        
+                <div class="footer-section">
+                    <h4 class="footer-title">Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#" class="social-link">Facebook</a>
+                        <a href="#" class="social-link">Instagram</a>
+                        <a href="#" class="social-link">Twitter</a>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="footer-bottom">
+                <p>&copy; 2024 ECOMART. All rights reserved. | Designed by Rohit Gurung</p>
+            </div>
+        </footer>
+
+   
+        
 
 </body>
-</html>
