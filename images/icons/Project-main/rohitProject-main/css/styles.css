@@ -5,12 +5,8 @@
     font-family: monospace;
 }
 
-body {
-    background-color: #FDFBD4;
-}
-
 span {
-    color: #115711;
+    color: #72fa77;
 }
 
 /* selection the nav tags through the class name that i setup in the html  */
@@ -19,13 +15,13 @@ span {
     align-items: center;
     justify-content: space-between;
     justify-items: center;
-    background-color: #e9c17d;
-    /* padding: 10px; */
+    background-color: #72fa77;
+    padding: 10px;
 }
 
 .navbar_heading {
-    width: 200px;
-    height: 150px;
+    font-family: monospace;
+    font-size: 40px;
     margin-left: 1rem;
 }
 
@@ -37,8 +33,7 @@ ul{
 
 ul li {
     padding: 10px;
-    font-size: 30px;
-    font-weight: 700;
+    font-size: 20px;
 }
 
 ul li a {
@@ -53,7 +48,7 @@ ul li a:hover {
 
 .icons {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     padding: 1rem;
     margin-right: 1rem;
@@ -93,22 +88,9 @@ ul li a:hover {
     border-radius: 4px;
     padding: 1rem;
     margin-top: 1rem;
-    background-color: #057e09;
+    background-color: #72fa77;
     cursor: pointer;
-    color: #ffffff;
 }
-
-
-.home-section {
-    background-image: url("../images/icons/aerial-forest-lake-conservation-view_1024x1024.webp");
-    background-size: cover;
-    display: flex;
-     flex-direction: column; 
-     align-items: center; 
-     padding: 4rem;
-}
-
-
 
 /* Products Section */
 .products-section {
@@ -120,7 +102,7 @@ ul li a:hover {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 2rem;
-    padding: 1rem 0;
+    padding: 2rem 0;
 }
 .product-card {
     background-color: white;
@@ -160,29 +142,9 @@ ul li a:hover {
     color: #000;
     margin-bottom: 1rem;
 }
-.product-price-container {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    margin-bottom: 1rem;
-}
-
-.product-price-original {
-    font-size: 1.4rem;
-    font-weight: normal;
-    color: #999;
-    text-decoration: line-through;
-}
-
-.product-price {
-    font-size: 1.8rem;
-    font-weight: bold;
-    color: #000;
-}
-
 .add-to-cart-btn {
-    background-color: #026406;
-    color: #fff;
+    background-color: #72fa77;
+    color: black;
     border: none;
     padding: 0.75rem 1.5rem;
     font-size: 1rem;
@@ -216,14 +178,14 @@ ul li a:hover {
 
 .footer-heading {
     font-size: 2rem;
-    color: #0f7d13;
+    color: #72fa77;
     margin-bottom: 1rem;
     font-weight: bold;
 }
 
 .footer-title {
     font-size: 1.3rem;
-    color: #0a720e;
+    color: #72fa77;
     margin-bottom: 1rem;
     font-weight: bold;
 }
@@ -317,22 +279,14 @@ ul li a:hover {
 .blog-card-text {
     line-height: 1.7;
     margin-bottom: 1.5rem;
-    font-size: large;
 }
 
-.research-text {
-    background: #fff;
-    border-radius: 10px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-    padding: 2rem;
-    margin-top: 50px;
-    font-size: x-large;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+.blog-card-link {
+    text-decoration: none;
+    color: #0f8e2a;
+    font-weight: bold;
 }
 
-.research-text p {
-    margin-top: 1rem;
+.blog-card-link:hover {
+    text-decoration: underline;
 }
