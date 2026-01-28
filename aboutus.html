@@ -1,99 +1,126 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>rohitProject</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EcoMart</title>
     <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <img
+          src="./images/icons/logo.png"
+          class="navba_image"
+          style="width: 150px; height: 100px"
+        />
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="aboutus.html">About Us</a></li>
+          <li><a href="research.html">Research</a></li>
+        </ul>
 
-</head>
-<body>
-        <header>
-            <nav class="navbar">
-                <img src="./images/icons/logo.png" class="navbar_heading">
-                <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="products.html">Products</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                    <li><a href="aboutus.html">About Us</a></li>
-                    <li><a href="research.html">Research</a></li>
-                </ul>
-    
-                <div class="icons">
-                    <div id="search-btn">
-                        <img style="height: 30px; width: 30px; margin-right: 2rem;" src="./images/icons/search.png" alt="search_icon">
-                    </div>
-                    <div id="cart-btn">
-                        <img style="height: 30px; width: 30px; margin-right: 2rem;"  src="./images/icons/cart.png" alt="cart icon">
-                    </div>
-                    <div id="user-btn">
-                        <img style="height: 30px; width: 30px; margin-right: 5rem;" src="./images/icons/user.png" alt="user icon">
-                    </div>
-                </div>
-            </nav>
-        </header>
+        <div class="icons">
+          <div id="search-btn">
+            <img
+              style="height: 30px; width: 30px; margin-right: 2rem"
+              src="./images/icons/search.png"
+              alt="search_icon"
+            />
+          </div>
+          <div id="cart-btn">
+            <img
+              style="height: 30px; width: 30px; margin-right: 2rem"
+              src="./images/icons/cart.png"
+              alt="cart icon"
+            />
+          </div>
+          <div id="user-btn">
+            <img
+              style="height: 30px; width: 30px; margin-right: 5rem"
+              src="./images/icons/user.png"
+              alt="user icon"
+            />
+          </div>
+        </div>
+      </nav>
+    </header>
 
-        <main>
-            <section class="products-section">
-                <h2 style="text-align: center; padding: .5rem; font-size: 4rem;">Our <span>Team</span></h2>
-        
-                <div class="products-grid">
-                    <!-- Team Member Card 1 -->
-                    <div class="product-card">
-                        <div class="product-image">
-                            <img src="./images/icons/rohit.png" alt="Team Member 1">
-                        </div>
-                        <div class="product-info">
-                            <h3 class="product-title">Rohit Gurung</h3>
-                            <button class="add-to-cart-btn">Resume</button>
-                        </div>
-                    </div>
-                      <!-- Team Member Card 2 -->
-                    <div class="product-card">
-                        <div class="product-image">
-                            <img src="./images/icons/lopsang.jpg" alt="Team Member 2">
-                        </div>
-                        <div class="product-info">
-                            <h3 class="product-title">Lopsang Lepcha</h3>
-                            <button class="add-to-cart-btn">Resume</button>
-                        </div>
-                    </div>
-        
-                </div>
-            </section>
-        </main>
+    <main>
+      <section class="products-section">
+        <h2 style="text-align: center; padding: 0.5rem; font-size: 4rem">
+          Our <span>Team</span>
+        </h2>
 
-   
-        <footer class="footer">
-            <div class="footer-container">
-                <div class="footer-section">
-                    <h3 class="footer-heading">ECOMART</h3>
-                    <p class="footer-text">Your trusted source for organic and eco-friendly products. Quality you can trust, nature you can feel.</p>
-                </div>
-        
-                <div class="footer-section">
-                    <h4 class="footer-title">Contact Us</h4>
-                    <ul class="footer-contact">
-                        <li>Email: info@ecomart.com</li>
-                        <li>Phone: +977 1234567890</li>
-                    </ul>
-                </div>
-        
-                <div class="footer-section">
-                    <h4 class="footer-title">Follow Us</h4>
-                    <div class="social-links">
-                        <a href="#" class="social-link">Facebook</a>
-                        <a href="#" class="social-link">Instagram</a>
-                        <a href="#" class="social-link">Twitter</a>
-                    </div>
-                </div>
+        <div class="products-grid">
+          <!-- Team Member Card 1 -->
+          <div class="product-card">
+            <div class="product-image">
+              <img src="./images/icons/rohit.png" alt="Team Member 1" />
             </div>
-        
-            <div class="footer-bottom">
-                <p>&copy; 2026 ECOMART. All rights reserved. | Designed by Rohit Gurung</p>
+            <div class="product-info">
+              <h3 class="product-title">Rohit Gurung</h3>
+              <button class="add-to-cart-btn">Resume</button>
             </div>
-        </footer>
-        
-<!-- linking the javascript file-->
-<script src="js/script.js"></script>
-</body>
+          </div>
+          <!-- Team Member Card 2 -->
+          <div class="product-card">
+            <div class="product-image">
+              <img src="./images/icons/lopsang.jpg" alt="Team Member 2" />
+            </div>
+            <div class="product-info">
+              <h3 class="product-title">Lopsang Lepcha</h3>
+              <button class="add-to-cart-btn">Resume</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-section">
+          <h3 class="footer-heading">ECOMART</h3>
+          <p class="footer-text">
+            Your trusted source for organic and eco-friendly products. Quality
+            you can trust, nature you can feel.
+          </p>
+        </div>
+
+        <div class="footer-section">
+          <h4 class="footer-title">Contact Us</h4>
+          <ul class="footer-contact">
+            <li>Email: info@ecomart.com</li>
+            <li>Phone: +977 1234567890</li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h4 class="footer-title">Follow Us</h4>
+          <div class="social-links">
+            <a href="#" class="social-link">Facebook</a>
+            <a href="#" class="social-link">Instagram</a>
+            <a href="#" class="social-link">Twitter</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>
+          &copy; 2026 ECOMART. All rights reserved.
+        </p>
+      </div>
+    </footer>
+
+    <!-- linking the javascript file-->
+    <script src="js/script.js"></script>
+    <script>
+      const user_btn = document.getElementById("user-btn");
+      user_btn.addEventListener("click", () => {
+        window.location.href = "user.html";
+      });
+    </script>
+  </body>
+</html>

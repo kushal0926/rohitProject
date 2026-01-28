@@ -1,15 +1,19 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>rohitProject</title>
+    <title>EcoMart</title>
     <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
     <header>
       <nav class="navbar">
-        <img src="./images/icons/logo.png" class="navbar_heading" />
+        <img
+          src="./images/icons/logo.png"
+          class="navba_image"
+          style="width: 150px; height: 100px"
+        />
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="products.html">Products</a></li>
@@ -63,7 +67,6 @@
               margin-top: 50px;
               border-radius: 50%;
               height: 250px;
-
             "
           />
           <p>
@@ -71,9 +74,9 @@
             body care is Dr. Squatch, an American personal care company founded
             in 2013 that has built a passionate community around nature-forward
             grooming products. What sets Dr. Squatch apart is its unwavering
-            commitment to using natural, plant-derived ingredients, many of which
-            are at least 98 % natural in origin according to international ISO
-            16128 standards while avoiding harsh chemicals, synthetic
+            commitment to using natural, plant-derived ingredients, many of
+            which are at least 98 % natural in origin according to international
+            ISO 16128 standards while avoiding harsh chemicals, synthetic
             fragrances, and unnecessary additives that are common in these
             products. Their blog content covers a wide range of topics from
             ingredient education and grooming tips to lifestyle and natural
@@ -121,13 +124,18 @@
 
       <div class="footer-bottom">
         <p>
-          &copy; 2026 ECOMART. All rights reserved. | Designed by Rohit Gurung
+          &copy; 2026 ECOMART. All rights reserved. 
         </p>
       </div>
     </footer>
 
-
     <!-- linking the javascript file-->
-<script src="js/script.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+      const user_btn = document.getElementById("user-btn");
+      user_btn.addEventListener("click", () => {
+        window.location.href = "user.html";
+      });
+    </script>
   </body>
 </html>

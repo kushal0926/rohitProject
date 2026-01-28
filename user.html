@@ -1,280 +1,272 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Sign In - EcoMart</title>
-        <link rel="stylesheet" href="css/styles.css" />
-        <style>
-            <!-- internal styling for the sign in -- > 
-            body {
-                display: flex;
-            }
-            .signin-section {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                min-height: 70vh;
-                padding: 32px;
-                margin: 32px 0;
-            }
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EcoMart</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <style>
+      <!-- internal styling for the sign in -- > body {
+        display: flex;
+      }
+      .signin-section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 70vh;
+        padding: 32px;
+        margin: 32px 0;
+      }
 
-            .signin-container {
-                background-color: white;
-                border-radius: 10px;
-                box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-                padding: 48px;
-                max-width: 450px;
-                width: 100%;
-            }
+      .signin-container {
+        background-color: white;
+        border-radius: 10px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        padding: 48px;
+        max-width: 450px;
+        width: 100%;
+      }
 
-            .signin-heading {
-                font-size: 40px;
-                text-align: center;
-                margin-bottom: 8px;
-                color: #115711;
-            }
+      .signin-heading {
+        font-size: 40px;
+        text-align: center;
+        margin-bottom: 8px;
+        color: #115711;
+      }
 
-            .signin-subtitle {
-                text-align: center;
-                color: #666;
-                margin-bottom: 32px;
-                font-size: 16px;
-            }
+      .signin-subtitle {
+        text-align: center;
+        color: #666;
+        margin-bottom: 32px;
+        font-size: 16px;
+      }
 
-            .signin-form {
-                display: flex;
-                flex-direction: column;
-            }
+      .signin-form {
+        display: flex;
+        flex-direction: column;
+      }
 
-            .form-group {
-                margin-bottom: 24px;
-            }
+      .form-group {
+        margin-bottom: 24px;
+      }
 
-            .form-group label {
-                display: block;
-                margin-bottom: 8px;
-                font-weight: bold;
-                color: #333;
-                font-size: 16px;
-            }
+      .form-group label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: bold;
+        color: #333;
+        font-size: 16px;
+      }
 
-            .form-group input {
-                width: 100%;
-                padding: 12px;
-                border: 2px solid #ddd;
-                border-radius: 4px;
-                font-size: 16px;
-                font-family: monospace;
-            }
+      .form-group input {
+        width: 100%;
+        padding: 12px;
+        border: 2px solid #ddd;
+        border-radius: 4px;
+        font-size: 16px;
+        font-family: monospace;
+      }
 
-            .form-group input:focus {
-                outline: none;
-                border-color: #026406;
-            }
+      .form-group input:focus {
+        outline: none;
+        border-color: #026406;
+      }
 
-            .form-options {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                margin-bottom: 24px;
-                font-size: 14px;
-            }
+      .form-options {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 24px;
+        font-size: 14px;
+      }
 
-            .remember-me {
-                display: flex;
-                align-items: center;
-                gap: 8px;
-                cursor: pointer;
-            }
+      .remember-me {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        cursor: pointer;
+      }
 
-            .remember-me input[type="checkbox"] {
-                width: auto;
-                cursor: pointer;
-            }
+      .remember-me input[type="checkbox"] {
+        width: auto;
+        cursor: pointer;
+      }
 
-            .forgot-password {
-                color: #026406;
-                text-decoration: none;
-            }
+      .forgot-password {
+        color: #026406;
+        text-decoration: none;
+      }
 
-            .forgot-password:hover {
-                text-decoration: underline;
-            }
+      .forgot-password:hover {
+        text-decoration: underline;
+      }
 
-            .signin-btn {
-                background-color: #026406;
-                color: #fff;
-                border: none;
-                padding: 12px 24px;
-                font-size: 17px;
-                border-radius: 4px;
-                cursor: pointer;
-                font-weight: bold;
-                margin-bottom: 16px;
-            }
+      .signin-btn {
+        background-color: #026406;
+        color: #fff;
+        border: none;
+        padding: 12px 24px;
+        font-size: 17px;
+        border-radius: 4px;
+        cursor: pointer;
+        font-weight: bold;
+        margin-bottom: 16px;
+      }
 
-            .signin-btn:hover {
-                background-color: #057e09;
-            }
+      .signin-btn:hover {
+        background-color: #057e09;
+      }
 
-            .signup-link {
-                text-align: center;
-                color: #666;
-                font-size: 11px;
-            }
+      .signup-link {
+        text-align: center;
+        color: #666;
+        font-size: 11px;
+      }
 
-            .signup-link a {
-                color: #026406;
-                text-decoration: none;
-                font-weight: bold;
-            }
+      .signup-link a {
+        color: #026406;
+        text-decoration: none;
+        font-weight: bold;
+      }
 
-            .signup-link a:hover {
-                text-decoration: underline;
-            }
-        </style>
-    </head>
-    <body>
-        <header>
-            <nav class="navbar">
-                <img src="./images/icons/logo.png" class="navbar_heading" />
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="products.html">Products</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                    <li><a href="aboutus.html">About Us</a></li>
-                    <li><a href="research.html">Research</a></li>
-                </ul>
+      .signup-link a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <img
+          src="./images/icons/logo.png"
+          class="navba_image"
+          style="width: 150px; height: 100px"
+        />
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="aboutus.html">About Us</a></li>
+          <li><a href="research.html">Research</a></li>
+        </ul>
 
-                <div class="icons">
-                    <div id="search-btn">
-                        <img
-                            style="
-                                height: 30px;
-                                width: 30px;
-                                margin-right: 2rem;
-                            "
-                            src="./images/icons/search.png"
-                            alt="search_icon"
-                        />
-                    </div>
-                    <div id="cart-btn">
-                        <img
-                            style="
-                                height: 30px;
-                                width: 30px;
-                                margin-right: 2rem;
-                            "
-                            src="./images/icons/cart.png"
-                            alt="cart icon"
-                        />
-                    </div>
-                    <div id="user-btn">
-                        <img
-                            style="
-                                height: 30px;
-                                width: 30px;
-                                margin-right: 5rem;
-                            "
-                            src="./images/icons/user.png"
-                            alt="user icon"
-                        />
-                    </div>
-                </div>
-            </nav>
-        </header>
+        <div class="icons">
+          <div id="search-btn">
+            <img
+              style="height: 30px; width: 30px; margin-right: 2rem"
+              src="./images/icons/search.png"
+              alt="search_icon"
+            />
+          </div>
+          <div id="cart-btn">
+            <img
+              style="height: 30px; width: 30px; margin-right: 2rem"
+              src="./images/icons/cart.png"
+              alt="cart icon"
+            />
+          </div>
+          <div id="user-btn">
+            <img
+              style="height: 30px; width: 30px; margin-right: 5rem"
+              src="./images/icons/user.png"
+              alt="user icon"
+            />
+          </div>
+        </div>
+      </nav>
+    </header>
 
-        <main>
-            <section class="signin-section">
-                <div class="signin-container">
-                    <h2 class="signin-heading">Sign In</h2>
-                    <p class="signin-subtitle">
-                        Welcome back! Please sign in to your account.
-                    </p>
+    <main>
+      <section class="signin-section">
+        <div class="signin-container">
+          <h2 class="signin-heading">Sign In</h2>
+          <p class="signin-subtitle">
+            Welcome back! Please sign in to your account.
+          </p>
 
-                    <form class="signin-form" action="#" method="POST">
-                        <div class="form-group">
-                            <label for="email">Email Address</label>
-                            <input
-                                type="email"
-                                id="email"
-                                name="email"
-                                placeholder="Enter your email"
-                                required
-                            />
-                        </div>
-
-                        <div class="form-group">
-                            <label for="password">Password</label>
-                            <input
-                                type="password"
-                                id="password"
-                                name="password"
-                                placeholder="Enter your password"
-                                required
-                            />
-                        </div>
-
-                        <div class="form-options">
-                            <label class="remember-me">
-                                <input type="checkbox" name="remember" />
-                                <span>Remember me</span>
-                            </label>
-                            <a href="#" class="forgot-password"
-                                >Forgot Password?</a
-                            >
-                        </div>
-
-                        <button type="submit" class="signin-btn">
-                            Sign In
-                        </button>
-
-                        <p class="signup-link">
-                            Don't have an account? <a href="#">Sign Up</a>
-                        </p>
-                    </form>
-                </div>
-            </section>
-        </main>
-
-        <footer class="footer">
-            <div class="footer-container">
-                <div class="footer-section">
-                    <h3 class="footer-heading">ECOMART</h3>
-                    <p class="footer-text">
-                        Your trusted source for organic and eco-friendly
-                        products. Quality you can trust, nature you can feel.
-                    </p>
-                </div>
-
-                <div class="footer-section">
-                    <h4 class="footer-title">Contact Us</h4>
-                    <ul class="footer-contact">
-                        <li>Email: info@ecomart.com</li>
-                        <li>Phone: +977 1234567890</li>
-                    </ul>
-                </div>
-
-                <div class="footer-section">
-                    <h4 class="footer-title">Follow Us</h4>
-                    <div class="social-links">
-                        <a href="#" class="social-link">Facebook</a>
-                        <a href="#" class="social-link">Instagram</a>
-                        <a href="#" class="social-link">Twitter</a>
-                    </div>
-                </div>
+          <form class="signin-form" action="#" method="POST">
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Enter your email"
+                required
+              />
             </div>
 
-            <div class="footer-bottom">
-                <p>
-                    &copy; 2026 ECOMART. All rights reserved. | Designed by
-                    Rohit Gurung
-                </p>
+            <div class="form-group">
+              <label for="password">Password</label>
+              <input
+                type="password"
+                id="password"
+                name="password"
+                placeholder="Enter your password"
+                required
+              />
             </div>
-        </footer>
 
-        <!-- linking the javascript file-->
-        <script src="js/script.js"></script>
-    </body>
+            <div class="form-options">
+              <label class="remember-me">
+                <input type="checkbox" name="remember" />
+                <span>Remember me</span>
+              </label>
+              <a href="#" class="forgot-password">Forgot Password?</a>
+            </div>
+
+            <button type="submit" class="signin-btn">Sign In</button>
+
+            <p class="signup-link">
+              Don't have an account? <a href="#">Sign Up</a>
+            </p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-section">
+          <h3 class="footer-heading">ECOMART</h3>
+          <p class="footer-text">
+            Your trusted source for organic and eco-friendly products. Quality
+            you can trust, nature you can feel.
+          </p>
+        </div>
+
+        <div class="footer-section">
+          <h4 class="footer-title">Contact Us</h4>
+          <ul class="footer-contact">
+            <li>Email: info@ecomart.com</li>
+            <li>Phone: +977 1234567890</li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h4 class="footer-title">Follow Us</h4>
+          <div class="social-links">
+            <a href="#" class="social-link">Facebook</a>
+            <a href="#" class="social-link">Instagram</a>
+            <a href="#" class="social-link">Twitter</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>
+          &copy; 2026 ECOMART. All rights reserved. 
+        </p>
+      </div>
+    </footer>
+
+    <!-- linking the javascript file-->
+    <script src="js/script.js"></script>
+    <script>
+      const user_btn = document.getElementById("user-btn");
+      user_btn.addEventListener("click", () => {
+        window.location.href = "user.html";
+      });
+    </script>
+  </body>
 </html>

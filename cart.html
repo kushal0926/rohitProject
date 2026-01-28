@@ -1,15 +1,19 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>rohitProject</title>
+    <title>EcoMart</title>
     <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
     <header>
       <nav class="navbar">
-        <img src="./images/icons/logo.png" class="navbar_heading" />
+        <img
+          src="./images/icons/logo.png"
+          class="navba_image"
+          style="width: 150px; height: 100px"
+        />
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="products.html">Products</a></li>
@@ -45,30 +49,74 @@
     </header>
 
     <main>
-      <section class="products-section" style="margin-top: 2rem;">
-        <h2 style="text-align: center; padding: .5rem; font-size: 4rem;">Your Cart</h2>
-    
-        <div style="max-width: 900px; margin: 2rem auto; display: grid; gap: 1.5rem;">
+      <section class="products-section" style="margin-top: 2rem">
+        <h2 style="text-align: center; padding: 0.5rem; font-size: 4rem">
+          Your Cart
+        </h2>
+
+        <div
+          style="
+            max-width: 900px;
+            margin: 2rem auto;
+            display: grid;
+            gap: 1.5rem;
+          "
+        >
           <!-- Cart Items Container (dynamically populated by JS) -->
           <div id="cart-items"></div>
-    
+
           <!-- Cart Summary -->
-          <div id="cart-summary" class="product-card" style="padding: 1.5rem;">
-            <h3 class="product-title" style="margin-bottom: 1rem;">Order Summary</h3>
-            <p style="display: flex; justify-content: space-between; margin-bottom: .5rem;">
-              <span>Items Total</span><strong data-summary="items-total">$0.00</strong>
+          <div id="cart-summary" class="product-card" style="padding: 1.5rem">
+            <h3 class="product-title" style="margin-bottom: 1rem">
+              Order Summary
+            </h3>
+            <p
+              style="
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 0.5rem;
+              "
+            >
+              <span>Items Total</span
+              ><strong data-summary="items-total">$0.00</strong>
             </p>
-            <p style="display: flex; justify-content: space-between; margin-bottom: .5rem;">
+            <p
+              style="
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: 0.5rem;
+              "
+            >
               <span>Delivery</span><strong>$0.00</strong>
             </p>
-            <hr style="margin: 1rem 0;">
-            <p style="display: flex; justify-content: space-between; font-size: 1.2rem;">
+            <hr style="margin: 1rem 0" />
+            <p
+              style="
+                display: flex;
+                justify-content: space-between;
+                font-size: 1.2rem;
+              "
+            >
               <span>Total</span><strong data-summary="total">$0.00</strong>
             </p>
-    
-            <div style="display: flex; gap: 1rem; margin-top: 1.5rem; flex-wrap: wrap;">
-              <a href="products.html" class="add-to-cart-btn" style="text-decoration: none; text-align: center;">Continue Shopping</a>
-              <button class="add-to-cart-btn" data-action="checkout">Checkout</button>
+
+            <div
+              style="
+                display: flex;
+                gap: 1rem;
+                margin-top: 1.5rem;
+                flex-wrap: wrap;
+              "
+            >
+              <a
+                href="products.html"
+                class="add-to-cart-btn"
+                style="text-decoration: none; text-align: center"
+                >Continue Shopping</a
+              >
+              <button class="add-to-cart-btn" data-action="checkout">
+                Checkout
+              </button>
             </div>
           </div>
         </div>
@@ -105,13 +153,18 @@
 
       <div class="footer-bottom">
         <p>
-          &copy; 2026 ECOMART. All rights reserved. | Designed by Rohit Gurung
+          &copy; 2026 ECOMART. All rights reserved. 
         </p>
       </div>
     </footer>
 
     <!-- linking the javascript file-->
-<script src="js/script.js"></script>
-
+    <script src="js/script.js"></script>
+    <script>
+      const user_btn = document.getElementById("user-btn");
+      user_btn.addEventListener("click", () => {
+        window.location.href = "user.html";
+      });
+    </script>
   </body>
 </html>

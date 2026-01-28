@@ -1,0 +1,23 @@
+{
+  "name": "ecomart",
+  "version": "1.0.0",
+  "description": "rohit project",
+  "homepage": "https://github.com/kushal0926/rohitProject#readme",
+  "bugs": {
+    "url": "https://github.com/kushal0926/rohitProject/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kushal0926/rohitProject.git"
+  },
+  "license": "ISC",
+  "author": "me",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "prettier": "3.8.1"
+  }
+}
