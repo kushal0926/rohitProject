@@ -307,6 +307,73 @@ document.addEventListener("click", function (e) {
   }
 });
 
+// --------------------------------------------------------------------------
+// Review form submission
+// -----------------------------------------------------------------------------
+const reviewForm = document.querySelector(".review-form");
+if (reviewForm) {
+  reviewForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    showThankYouPopup();
+    reviewForm.reset();
+  });
+}
+
+// --------------------------------------------------------------------------
+// Thank you popup functions
+// -------------------------------------
+function showThankYouPopup() {
+  let overlay = document.getElementById("thank-you-popup-overlay");
+
+  // if it already exists, just shoing it again
+  if (overlay) {
+    overlay.style.display = "flex";
+    return;
+  }
+
+  overlay = document.createElement("div");
+  overlay.id = "thank-you-popup-overlay";
+  overlay.className = "thank-you-popup-overlay";
+
+  overlay.innerHTML = `
+          <div class="thank-you-popup">
+            <h3>Thank you for your feedback</h3>
+            <p>We appreciate you taking the time to share your experience with us.</p>
+            <div class="thank-you-popup-actions">
+              <button type="button" class="search-popup-button primary" data-thank-you-action="close">
+                Close
+              </button>
+            </div>
+          </div>
+        `;
+
+  document.body.appendChild(overlay);
+
+  // Close when clicking on overlay background
+  overlay.addEventListener("click", (e) => {
+    if (e.target === overlay) {
+      closeThankYouPopup();
+    }
+  });
+
+  // Button inside popup
+  overlay.querySelectorAll("[data-thank-you-action]").forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+      const action = e.currentTarget.getAttribute("data-thank-you-action");
+      if (action === "close") {
+        closeThankYouPopup();
+      }
+    });
+  });
+}
+
+function closeThankYouPopup() {
+  const overlay = document.getElementById("thank-you-popup-overlay");
+  if (overlay) {
+    overlay.style.display = "none";
+  }
+}
+
 // making the card loads the products if it refresh
 if (document.readyState === "loading") {
   document.addEventListener("DOMContentLoaded", displayCart);
