@@ -68,7 +68,7 @@ search_btn.addEventListener("click", () => {
 });
 
 // -------------------------------------------------------------------------------
-// Cart Buttons
+// cart buttons
 // ----------------------------------------------------------------------
 
 cart_btn.addEventListener("click", () => {
@@ -157,6 +157,8 @@ function changeQuantity(productId, newQuantity) {
 // ---------------------------------------------------------------------
 // calculating total price
 // ----------------------------------------------
+const DELIVERY_FEE = 5;
+
 function calculateTotal() {
   const cart = getCart();
   let total = 0;
@@ -173,7 +175,13 @@ function calculateTotal() {
 // ------------------------------------------------
 function displayCart() {
   const cartContainer = document.getElementById("cart-items");
-  const totalContainer = document.getElementById("cart-total");
+  if (!cartContainer) return;
+
+  const itemsTotalElement = document.querySelector(
+    '[data-summary="items-total"]',
+  );
+  const deliveryElement = document.querySelector('[data-summary="delivery"]');
+  const totalElement = document.querySelector('[data-summary="total"]');
   const cart = getCart();
 
   // deleting cart items
@@ -214,9 +222,19 @@ function displayCart() {
     cartContainer.appendChild(itemDiv);
   });
 
-  // updating total
-  if (totalContainer) {
-    totalContainer.textContent = `$${calculateTotal().toFixed(2)}`;
+  // updating summary totals
+  const itemsTotal = calculateTotal();
+  const delivery = cart.length > 0 ? DELIVERY_FEE : 0;
+  const grandTotal = itemsTotal + delivery;
+
+  if (itemsTotalElement) {
+    itemsTotalElement.textContent = `$${itemsTotal.toFixed(2)}`;
+  }
+  if (deliveryElement) {
+    deliveryElement.textContent = `$${delivery.toFixed(2)}`;
+  }
+  if (totalElement) {
+    totalElement.textContent = `$${grandTotal.toFixed(2)}`;
   }
 
   // event listeners
@@ -235,7 +253,7 @@ function cartEventListeners() {
         const itemId = e.target.getAttribute("data-item-id");
         const newQty = parseInt(e.target.value) || 1;
         changeQuantity(itemId, newQty);
-        displayCart(); 
+        displayCart();
       });
     });
 
@@ -246,7 +264,7 @@ function cartEventListeners() {
       button.addEventListener("click", (e) => {
         const itemId = e.target.getAttribute("data-item-id");
         removeProductFromCart(itemId);
-          displayCart();
+        displayCart();
       });
     });
 }
@@ -269,7 +287,7 @@ document.addEventListener("click", function (e) {
     // creating unique id for product name
     const id = name.toLowerCase().replace(/\s+/g, "-");
 
-    // product adding to the cart 
+    // product adding to the cart
     addProductToCart({
       id: id,
       name: name,
@@ -281,7 +299,7 @@ document.addEventListener("click", function (e) {
     button.textContent = "Added";
     button.style.backgroundColor = "#28a745";
 
-      // making it switch to add to cart after 1 sec
+    // making it switch to add to cart after 1 sec
     setTimeout(() => {
       button.textContent = "Add to Cart";
       button.style.backgroundColor = "";

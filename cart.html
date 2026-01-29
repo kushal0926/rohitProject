@@ -62,7 +62,6 @@
             gap: 1.5rem;
           "
         >
-          <!-- Cart Items Container (dynamically populated by JS) -->
           <div id="cart-items"></div>
 
           <!-- Cart Summary -->
@@ -87,7 +86,8 @@
                 margin-bottom: 0.5rem;
               "
             >
-              <span>Delivery</span><strong>$0.00</strong>
+              <span>Delivery</span
+              ><strong data-summary="delivery">$0.00</strong>
             </p>
             <hr style="margin: 1rem 0" />
             <p
@@ -152,9 +152,7 @@
       </div>
 
       <div class="footer-bottom">
-        <p>
-          &copy; 2026 ECOMART. All rights reserved. 
-        </p>
+        <p>&copy; 2026 ECOMART. All rights reserved.</p>
       </div>
     </footer>
 

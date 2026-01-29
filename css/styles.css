@@ -9,7 +9,6 @@ span {
   color: #115711;
 }
 
-/* selection the nav tags through the class name that i setup in the html  */
 .navbar {
   display: flex;
   align-items: center;
@@ -70,6 +69,7 @@ ul li a:hover {
   cursor: pointer;
   margin-right: 30px;
 }
+
 .shopping_cart_icon:hover {
   color: white;
 }
@@ -100,12 +100,14 @@ ul li a:hover {
   max-width: 1200px;
   margin: 0 auto;
 }
+
 .products-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 32px;
   padding: 12px 0;
 }
+
 .product-card {
   background-color: white;
   border-radius: 8px;
@@ -114,23 +116,27 @@ ul li a:hover {
   display: flex;
   flex-direction: column;
 }
+
 .product-image {
   width: 100%;
   height: 250px;
   overflow: hidden;
   background-color: #f5f5f5;
 }
+
 .product-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
+
 .product-info {
   padding: 24px;
   display: flex;
   flex-direction: column;
   flex-grow: 1;
 }
+
 .product-title {
   font-size: 24px;
   font-weight: bold;
@@ -144,6 +150,7 @@ ul li a:hover {
   color: #000;
   margin-bottom: 1rem;
 }
+
 .product-price-container {
   display: flex;
   align-items: center;
@@ -379,4 +386,100 @@ ul li a:hover {
 .search-popup-button.secondary {
   background-color: #e5e5e5;
   color: #333333;
+}
+
+/* Reviews Section */
+/* ---------------------------------------------------------------------------------------------- */
+.reviews-section {
+  max-width: 900px;
+  margin: 64px auto;
+  padding: 32px 24px 40px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.reviews-section h2 {
+  font-size: 40px;
+  text-align: center;
+  margin-bottom: 8px;
+}
+
+.reviews-intro {
+  text-align: center;
+  font-size: 18px;
+  color: #555555;
+  margin-bottom: 24px;
+}
+
+.review-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.review-form .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.rating-group {
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+}
+
+.rating-group .field-label {
+  min-width: 70px;
+}
+
+.review-form label,
+.field-label {
+  font-weight: bold;
+  font-size: 16px;
+  color: #333333;
+}
+
+.review-form input,
+.review-form textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 4px;
+  border: 2px solid #dddddd;
+  font-size: 16px;
+}
+
+.review-form textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.review-submit-btn {
+  margin-top: 8px;
+  align-self: flex-start;
+}
+
+.star-rating {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-start;
+  gap: 4px;
+}
+
+.star-rating input {
+  display: none;
+}
+
+.star-rating label {
+  font-size: 28px;
+  color: #cccccc;
+  cursor: pointer;
+  transition: color 0.2s ease-in-out;
+}
+
+.star-rating input:checked~label,
+.star-rating label:hover,
+.star-rating label:hover~label {
+  color: #f59e0b;
 }
